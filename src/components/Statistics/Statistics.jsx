@@ -5,7 +5,7 @@ export const Statistics = ({ title, stats }) => {
   const elements = stats.map(stat => <StatItem key={stat.id} {...stat} />);
   return (
     <section class="statistics">
-      <h2 class="title">{title}</h2>
+      {title && <h2 class="title">{title}</h2>}
       <ul class="stat-list">{elements}</ul>
     </section>
   );
