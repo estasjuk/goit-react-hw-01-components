@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types';
+import css from './StatItem.module.css';
+import { setRandomColor } from '../../../utils/setRandomColor';
 
 export const StatItem = ({ label, percentage }) => {
   return (
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}</span>
+    <li
+      className={css.item}
+      style={{
+        backgroundColor: setRandomColor(),
+      }}
+    >
+      <span className={css.label}>{label}</span>
+      <span className={css.percentage}>{percentage}%</span>
     </li>
   );
 };
